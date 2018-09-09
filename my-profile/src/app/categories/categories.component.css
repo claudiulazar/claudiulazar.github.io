@@ -1,0 +1,23 @@
+i {
+  color: #0270c9;
+  margin-top: 20px;
+  padding: 10px;
+  border: none !important;
+  outline: none !important;
+}
+
+.pointer {
+  border: none !important;
+  outline: none !important;
+  cursor: pointer;
+  color: #0270c9;
+}
+
+.title {
+  padding-bottom: 20px;
+}
+
+.categories {
+  border-bottom: 2px solid #0270c9;
+  background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);
+}

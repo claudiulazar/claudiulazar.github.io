@@ -1,0 +1,8 @@
+h3 {
+  color: #0270c9;
+}
+
+.projects {
+  min-height: calc( 100vh - 140px );
+  background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);
+}

@@ -1,0 +1,9 @@
+
+app-left-side {
+  height: 100vh;
+}
+
+app-right-side {
+  /*background-image: linear-gradient(to bottom right, #fefefe, #d6d6d6);*/
+  min-height: 100vh;
+}
