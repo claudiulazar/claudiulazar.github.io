@@ -1,9 +1,19 @@
 
 app-left-side {
   height: 100vh;
+  z-index: 1000;
+  margin-left: 0!important;
+  margin-right: 0!important;
 }
 
 app-right-side {
   /*background-image: linear-gradient(to bottom right, #fefefe, #d6d6d6);*/
   min-height: 100vh;
+}
+
+.big-picture {
+  background-image: url("../assets/code.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

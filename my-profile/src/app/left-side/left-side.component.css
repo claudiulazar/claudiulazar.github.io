@@ -52,9 +52,10 @@ img {
 
 @media (max-width: 576px) {
   .left-side {
+    position: relative;
     height: 100vh;
     color: #fefefe;
-    width: 100vw;
+    width: calc(100vw + 15px);
 
   }
 }

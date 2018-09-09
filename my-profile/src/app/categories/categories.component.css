@@ -11,6 +11,8 @@ i {
   outline: none !important;
   cursor: pointer;
   color: #0270c9;
+  padding-left:  0!important;
+  padding-right:  0!important;
 }
 
 .title {

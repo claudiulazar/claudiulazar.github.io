@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\napp-left-side {\n  height: 100vh;\n}\n\napp-right-side {\n  /*background-image: linear-gradient(to bottom right, #fefefe, #d6d6d6);*/\n  min-height: 100vh;\n}\n"
+module.exports = "\napp-left-side {\n  height: 100vh;\n  z-index: 1000;\n  margin-left: 0!important;\n  margin-right: 0!important;\n}\n\napp-right-side {\n  /*background-image: linear-gradient(to bottom right, #fefefe, #d6d6d6);*/\n  min-height: 100vh;\n}\n\n.big-picture {\n  background-image: url('code.png');\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n}\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "\napp-left-side {\n  height: 100vh;\n}\n\napp-right-side {\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row big-picture animated fadeIn\">\n  <app-left-side class=\"col-xs-12 col-sm-6\"></app-left-side>\n  <app-right-side class=\"col-xs-12 col-sm-6\"></app-right-side>\n</div>\n"
+module.exports = "<div class=\"row big-picture animated fadeIn\">\n  <app-left-side class=\"col-12 col-sm-6\"></app-left-side>\n  <app-right-side class=\"col-12 col-sm-6\"></app-right-side>\n</div>\n"
 
 /***/ }),
 
@@ -208,7 +208,7 @@ var routing = _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRo
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "i {\n  color: #0270c9;\n  margin-top: 20px;\n  padding: 10px;\n  border: none !important;\n  outline: none !important;\n}\n\n.pointer {\n  border: none !important;\n  outline: none !important;\n  cursor: pointer;\n  color: #0270c9;\n}\n\n.title {\n  padding-bottom: 20px;\n}\n\n.categories {\n  border-bottom: 2px solid #0270c9;\n  background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);\n}\n"
+module.exports = "i {\n  color: #0270c9;\n  margin-top: 20px;\n  padding: 10px;\n  border: none !important;\n  outline: none !important;\n}\n\n.pointer {\n  border: none !important;\n  outline: none !important;\n  cursor: pointer;\n  color: #0270c9;\n  padding-left:  0!important;\n  padding-right:  0!important;\n}\n\n.title {\n  padding-bottom: 20px;\n}\n\n.categories {\n  border-bottom: 2px solid #0270c9;\n  background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);\n}\n"
 
 /***/ }),
 
@@ -219,7 +219,7 @@ module.exports = "i {\n  color: #0270c9;\n  margin-top: 20px;\n  padding: 10px;\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row text-center categories\">\n  <div class=\"col-xs-3 col-sm-3 pointer\" routerLink=\"/\">\n    <i class=\"col-xs-12 col-sm-12 fa fa-home fa-3x\" ></i>\n    <h5 class=\"title\">Home</h5>\n  </div>\n  <div class=\"col-xs-3 col-sm-3 pointer\" routerLink=\"/technologies\">\n    <i class=\"col-xs-12 col-sm-12 fa fa-diamond fa-3x\" ></i>\n    <h5 class=\"title\">Technologies</h5>\n  </div>\n  <div class=\"col-xs-3 col-sm-3 pointer\" routerLink=\"/projects\">\n    <i class=\"col-xs-12 col-sm-12 fa fa-desktop fa-3x\" ></i>\n    <h5 class=\"title\">Projects</h5>\n  </div>\n  <div class=\"col-xs-3 col-sm-3 pointer\" routerLink=\"/contact\">\n    <i class=\"col-xs-12 col-sm-12 fa fa-phone fa-3x\" ></i>\n    <h5 class=\"title\">Contact</h5>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row text-center categories\">\n  <div class=\"col-3 pointer text-center\" routerLink=\"/\">\n    <i class=\"col-xs-12 col-sm-12 fa fa-home fa-3x\" ></i>\n    <h6 class=\"col-12 title\">Home</h6>\n  </div>\n  <div class=\"col-3 pointer text-center\" routerLink=\"/technologies\">\n    <i class=\"col-xs-12 col-sm-12 fa fa-diamond fa-3x\" ></i>\n    <h6 class=\"col-12 title\">Tech</h6>\n  </div>\n  <div class=\"col-3 pointer text-center\" routerLink=\"/projects\">\n    <i class=\"col-xs-12 col-sm-12 fa fa-desktop fa-3x\" ></i>\n    <h6 class=\"col-12 title\">Projects</h6>\n  </div>\n  <div class=\"col-3 pointer text-center\" routerLink=\"/contact\">\n    <i class=\"col-xs-12 col-sm-12 fa fa-phone fa-3x\" ></i>\n    <h6 class=\"col-12 title\">Contact</h6>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -271,7 +271,7 @@ var CategoriesComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h3 {\n  color: #0270c9;\n}\n\n.contacts {\n  min-height: calc( 100vh - 140px );\n  background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);\n}\n"
+module.exports = "h3 {\n  color: #0270c9;\n}\n\n.contacts {\n  min-height: calc( 100vh - 140px );\n  background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);\n  -webkit-animation-name: slideInRight;\n          animation-name: slideInRight;\n}\n\n@media (max-width: 576px) {\n  .contacts {\n    -webkit-animation-name: slideInLeft;\n            animation-name: slideInLeft;\n  }\n}\n"
 
 /***/ }),
 
@@ -282,7 +282,7 @@ module.exports = "h3 {\n  color: #0270c9;\n}\n\n.contacts {\n  min-height: calc(
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"contacts animated slideInRight row\">\n  <h3>Here is some contact info:</h3>\n</div>\n"
+module.exports = "<div class=\"contacts animated  row\">\n  <div class=\"col-12\">\n    <div class=\"container\">\n      <h3>Here is some contact info:</h3>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -334,7 +334,7 @@ var ContactComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h3 {\n  color: #0270c9;\n}\n\n.home {\n  min-height: calc( 100vh - 140px );\n  background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);\n}\n"
+module.exports = "h3 {\n  color: #0270c9;\n}\n\n.home {\n  min-height: calc( 100vh - 140px );\n  background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);\n  -webkit-animation-name: slideInRight;\n          animation-name: slideInRight;\n}\n\n@media (max-width: 576px) {\n  .home {\n    -webkit-animation-name: slideInLeft;\n            animation-name: slideInLeft;\n  }\n}\n"
 
 /***/ }),
 
@@ -345,7 +345,7 @@ module.exports = "h3 {\n  color: #0270c9;\n}\n\n.home {\n  min-height: calc( 100
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"home animated slideInRight row\">\n  <div class=\"col-12\">\n    <h3>Home used:</h3>\n  </div>\n</div>\n"
+module.exports = "<div class=\"home animated  row\">\n  <div class=\"col-12\">\n    <div class=\"container\">\n      <h3>Home used:</h3>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -397,7 +397,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "img {\n  width: 270px;\n  height: 270px;\n\n  margin: 1em auto;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center center;\n  border-radius: 99em;\n  border: 5px solid #eee;\n  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);\n}\n\n.margin-top {\n  padding-top: 10vw;\n}\n\n@-webkit-keyframes pulse {\n  from {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1);\n  }\n\n  50% {\n    -webkit-transform: scale3d(1.05, 1.05, 1.05);\n            transform: scale3d(1.05, 1.05, 1.05);\n  }\n\n  to {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1);\n  }\n}\n\n@keyframes pulse {\n  from {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1);\n  }\n\n  50% {\n    -webkit-transform: scale3d(1.05, 1.05, 1.05);\n            transform: scale3d(1.05, 1.05, 1.05);\n  }\n\n  to {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1);\n  }\n}\n\n.slow-pulse {\n  -webkit-animation-name: pulse;\n          animation-name: pulse;\n  -webkit-animation-duration: 5s;\n          animation-duration: 5s;\n}\n\n.name, .sub {\n  color: #ffffff;\n  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);\n}\n\n.left-side {\n  position: fixed;\n  height: 100vh;\n  color: #fefefe;\n  width: 50vw;\n  background-image: linear-gradient(to bottom right, #0486db, #012172);\n}\n\n@media (max-width: 576px) {\n  .left-side {\n    height: 100vh;\n    color: #fefefe;\n    width: 100vw;\n\n  }\n}\n"
+module.exports = "img {\n  width: 270px;\n  height: 270px;\n\n  margin: 1em auto;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center center;\n  border-radius: 99em;\n  border: 5px solid #eee;\n  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);\n}\n\n.margin-top {\n  padding-top: 10vw;\n}\n\n@-webkit-keyframes pulse {\n  from {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1);\n  }\n\n  50% {\n    -webkit-transform: scale3d(1.05, 1.05, 1.05);\n            transform: scale3d(1.05, 1.05, 1.05);\n  }\n\n  to {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1);\n  }\n}\n\n@keyframes pulse {\n  from {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1);\n  }\n\n  50% {\n    -webkit-transform: scale3d(1.05, 1.05, 1.05);\n            transform: scale3d(1.05, 1.05, 1.05);\n  }\n\n  to {\n    -webkit-transform: scale3d(1, 1, 1);\n            transform: scale3d(1, 1, 1);\n  }\n}\n\n.slow-pulse {\n  -webkit-animation-name: pulse;\n          animation-name: pulse;\n  -webkit-animation-duration: 5s;\n          animation-duration: 5s;\n}\n\n.name, .sub {\n  color: #ffffff;\n  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);\n}\n\n.left-side {\n  position: fixed;\n  height: 100vh;\n  color: #fefefe;\n  width: 50vw;\n  background-image: linear-gradient(to bottom right, #0486db, #012172);\n}\n\n@media (max-width: 576px) {\n  .left-side {\n    position: relative;\n    height: 100vh;\n    color: #fefefe;\n    width: calc(100vw + 15px);\n\n  }\n}\n"
 
 /***/ }),
 
@@ -460,7 +460,7 @@ var LeftSideComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h3 {\n  color: #0270c9;\n}\n\n.projects {\n  min-height: calc( 100vh - 140px );\n  background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);\n}\n"
+module.exports = "h3 {\n  color: #0270c9;\n}\n\n.projects {\n  min-height: calc( 100vh - 140px );\n  background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);\n  -webkit-animation-name: slideInRight;\n          animation-name: slideInRight;\n}\n\n@media (max-width: 576px) {\n  .projects {\n    -webkit-animation-name: slideInLeft;\n            animation-name: slideInLeft;\n  }\n}\n"
 
 /***/ }),
 
@@ -471,7 +471,7 @@ module.exports = "h3 {\n  color: #0270c9;\n}\n\n.projects {\n  min-height: calc(
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"projects animated slideInRight row\">\n  <h3>Projects I've worked on</h3>\n</div>\n"
+module.exports = "<div class=\"projects animated  row\">\n  <div class=\"col-12\">\n    <div class=\"container\">\n      <h3>Projects I've worked on</h3>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -586,7 +586,7 @@ var RightSideComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h3 {\n  color: #0270c9;\n}\n\n.technologies {\n  min-height: calc( 100vh - 140px );\n  background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);\n}\n"
+module.exports = "h3 {\n  color: #0270c9;\n}\n\n.technologies {\n  min-height: calc( 100vh - 140px );\n  background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);\n  -webkit-animation-name: slideInRight;\n          animation-name: slideInRight;\n}\n\n@media (max-width: 576px) {\n  .technologies {\n    -webkit-animation-name: slideInLeft;\n            animation-name: slideInLeft;\n  }\n}\n"
 
 /***/ }),
 
@@ -597,7 +597,7 @@ module.exports = "h3 {\n  color: #0270c9;\n}\n\n.technologies {\n  min-height: c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"technologies animated slideInRight row\">\n  <div class=\"container\">\n    <div class=\"col-12 \">\n      <h3>Technologies used:</h3>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"technologies animated  row\">\n  <div class=\"container\">\n    <div class=\"col-12 \">\n      <h3>Technologies used:</h3>\n      <br/>\n      <span>- JAVA</span>\n      <br/>\n      <span>- TypeScript</span>\n      <br/>\n      <span>- JavaScript</span>\n      <br/>\n      <span>- Ruby</span>\n      <br/>\n      <span>- C/C++</span>\n      <br/>\n      <span>- C#</span>\n      <br/>\n      <span>- jQuery</span>\n      <br/>\n      <span>- JSP</span>\n      <br/>\n      <span>- HTML</span>\n      <br/>\n      <span>- CSS</span>\n      <br/>\n      <span>- Python (just played a little with it)</span>\n      <br/>\n      <span>- Scala (just played a little with it)</span>\n      <br/>\n      <span>- SQL</span>\n      <br/>\n      <span>- NoSQL</span>\n      <br/>\n      <span>- MySQL</span>\n      <br/>\n      <span>- MsSQL</span>\n      <br/>\n      <span>- PostgreSQL</span>\n      <br/>\n      <span>- Spring</span>\n      <br/>\n      <span>- Spring Boot</span>\n      <br/>\n      <span>- Hybris</span>\n      <br/>\n      <span>- AngularJS  (not a big fan)</span>\n      <br/>\n      <span>- Angular 2.x-6.x</span>\n      <br/>\n      <span>- Ember.js</span>\n      <br/>\n      <span>- ReactJS (just played a little with it)</span>\n      <br/>\n      <span>- Vue.js (just played a little with it)</span>\n      <br/>\n      <span>- NativeScript</span>\n      <br/>\n      <span>- Ionic Framework</span>\n      <br/>\n      <span>- Node.js</span>\n      <br/>\n      <span>- PhantomJS</span>\n      <br/>\n      <span>- Capybara</span>\n      <br/>\n      <span>- Webpack</span>\n      <br/>\n      <span>- Docker</span>\n      <br/>\n      <span>- Docker-compose</span>\n      <br/>\n      <span>- Bitbucket pipelines</span>\n      <br/>\n      <span>- Nginx</span>\n      <br/>\n      <span>- Tomcat </span>\n      <br/>\n      <span>- Solr (used and configured)\t</span>\n      <br/>\n      <span>- ElasticSearch  (used and configured)</span>\n      <br/>\n      <span>- Jenkins</span>\n      <br/>\n      <span>- ShellScript</span>\n      <br/>\n      <span>- Bash/Batch</span>\n      <br/>\n      <span>- Groovy</span>\n      <br/>\n      <span>- Maven</span>\n      <br/>\n      <span>- Ant</span>\n      <br/>\n      <span>- NPM</span>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 

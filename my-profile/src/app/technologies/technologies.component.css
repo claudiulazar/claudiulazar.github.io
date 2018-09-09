@@ -5,4 +5,12 @@ h3 {
 .technologies {
   min-height: calc( 100vh - 140px );
   background-image: linear-gradient(to bottom right, #fefefe, #f0f0f0);
+  animation-name: slideInRight;
+}
+
+
+@media (max-width: 576px) {
+  .technologies {
+    animation-name: slideInLeft;
+  }
 }
